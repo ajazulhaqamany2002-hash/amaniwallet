@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AmanyWallet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="logo">Amani Wallet</div>
+	 <div class="logo" id="ak" style="width:50%; text-align:left;">
+    
+    <img src="image/ak.png" alt="تصویر بین پنل‌ها" style="max-width:20%; height:auto; border-radius:12px; margin:20px 0;">
+	
+  </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="menu">
+      <li><a onclick="toggleSubMenu(this)">Home</a></li>
+     
+      <li>
+        <a onclick="toggleSubMenu(this)">Services</a>
+        <ul>
+      <li><a href="#">گزینه 1</a></li>
+          <li><a href="#">گزینه 2</a></li>
+        </ul>
+      </li>
+      <li><a href="branch.html">Branch</a></li>
+	   <li>
+        <a onclick="toggleSubMenu(this)">About</a>
+        <ul>
+          <li><a href="#">گزینه 1</a></li>
+          <li><a href="#">گزینه 2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+ <div class="container">
+ 
+  <div style="width:100%; text-align:center;">
+    <h1>Amani Wallet</h1>
+   
+  </div>
+  
+  
+      <div class="panel bg" style="background:#66b8e6; color:white; text-align:center;">
+    <img src="image/bg.png" alt="محتوای ویژه" style="width:100%; border-radius:8px;">
+   <h4 style="text-align:center;">Download App</h4>
+	 <a href="Amaniwallet.apk" download>
+    <button style="position:center; background-color:#edf2fa; border-radius:8px; padding:5px;  cursor: pointer;">AmaniWallet.apk</button>
+  </a>
+    <p style="text-align:center;">for android system</p>
+  </div>
+
+	 
+  </div>
+
+<div class="container">
+    <div class="panel" style="padding:0px;">
+	      <img src="image/PUBG.png" alt="محتوای ویژه" style="width:100%; border-radius:8px;">
+
+    
+    </div>
+	  <div class="panel" style="padding:0px;">
+	      <img src="image/datapackage.png" alt="محتوای ویژه" style="width:100%; border-radius:8px;">
+
+    
+    </div>
+	  <div class="panel" style="padding:0px;">
+	      <img src="image/social media.png" alt="محتوای ویژه" style="width:100%; border-radius:8px;">
+
+    
+    </div>
+   
+   
+
+  </div>
+
+<div class="container">
+ 
+</div>
+
+
+
+
+
+
+
+
+<footer style="background:#2c3e50; color:white; padding:30px 20px; text-align:center;">
+  
+   <div class="container">
+     &copy; 2025 - AmaniWallet - <a href="Privacy.html" style="color:#fff">Privacy</a>
+ </div>
+ 
+</footer>
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('active');
+    }
+
+    function toggleSubMenu(element) {
+      const parent = element.parentElement;
+      parent.classList.toggle('active');
+
+      // بستن بقیه زیرمنوها
+      document.querySelectorAll('.menu li').forEach(li => {
+        if (li !== parent) li.classList.remove('active');
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+

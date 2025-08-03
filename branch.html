@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AmanyWallet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/leaflet.css" />
+   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- JS کتابخانه Leaflet -->
+  
+
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+	  
+	  
+    }
+</style>
+  
+  
+ 
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="logo">Amani Wallet</div>
+	 <div class="logo" id="ak" style="width:50%; text-align:left;">
+    
+    <img src="image/ak.png" alt="تصویر بین پنل‌ها" style="max-width:20%; height:auto; border-radius:12px; margin:20px 0;">
+	
+  </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="menu">
+      <li><a onclick="toggleSubMenu(this)" href="index.html">Home</a></li>
+     
+      <li>
+        <a onclick="toggleSubMenu(this)">Services</a>
+        <ul>
+ <li><a href="#">گزینه 1</a></li>
+          <li><a href="#">گزینه 2</a></li>
+        </ul>
+      </li>
+       <li><a href="branch.html">Branch</a></li>
+	   <li>
+        <a onclick="toggleSubMenu(this)">About</a>
+        <ul>
+          <li><a href="#">گزینه 1</a></li>
+          <li><a href="#">گزینه 2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+ <div class="container">
+ 
+  <div style="width:100%; text-align:center;">
+    <h1>Amani Wallet</h1>
+   
+  </div>
+  
+  
+      <div class="panel bg" id="map" style="background:#2c3e50; color:white; text-align:center;">
+   
+ 
+   
+  </div>
+
+	 
+  </div>
+
+
+
+
+<!-- ... بخش‌های قبلی منو و محتوا ... -->
+
+
+
+
+
+
+
+<!-- فوتر -->
+<footer style="background:#2c3e50; color:white; padding:30px 20px; text-align:center;">
+ 
+   <div class="container">
+     &copy; 2025 - AmaniWallet - <a href="Privacy.html" style="color:#fff">Privacy</a>
+ </div>
+</footer>
+ 
+
+</body>
+</html>
+
+
+
+
+
+
+
+<script src="js/leaflet.js"></script>
+
+  <script>
+    // ایجاد نقشه و تعیین موقعیت اولیه
+    var map = L.map('map').setView([36.73021786862724, 68.86778805170212], 7); 
+
+   
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© Amani Group'
+    }).addTo(map);
+
+  
+    var locations = [
+      {name: "<h2>کابل حیدری مارکیت تهکوی دوکان 127</h2>", coords: [34.516565928323786, 69.17991957335137]},
+      {name: "هرات", coords: [34.3482, 62.1997]},
+      {name: "مزار شریف", coords: [36.7090, 67.1109]},
+      {name: "<h2>بازار آقتپه روبروی سرای نجاری اعجازالحق امانی</h2>", coords: [36.98178597220369, 68.54505027603793]},
+	   {name: "<h2>کندز مهمند مارکیت منزل اول دکان 159 و 160 صرافی عبدالله امانی <br>0799551496</h2>", coords: [36.73021786862724, 68.86778805170212]},
+      {name: "قندهار", coords: [31.6289, 65.7372]}
+    ];
+
+  
+    locations.forEach(function(location) {
+      L.marker(location.coords)
+        .addTo(map)
+        .bindPopup(location.name);
+    });
+  </script>
+   <script>
+    function toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('active');
+    }
+
+    function toggleSubMenu(element) {
+      const parent = element.parentElement;
+      parent.classList.toggle('active');
+
+      // بستن بقیه زیرمنوها
+      document.querySelectorAll('.menu li').forEach(li => {
+        if (li !== parent) li.classList.remove('active');
+      });
+    }
+  </script>
+  

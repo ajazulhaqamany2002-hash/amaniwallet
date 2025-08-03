@@ -1,0 +1,126 @@
+ body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      background: #ecf0f1;
+    }
+
+    .navbar {
+      background: #2c3e50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    ul.menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul.menu li {
+      position: relative;
+    }
+
+    ul.menu li a {
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+    }
+
+    ul.menu li a:hover {
+      background: #1abc9c;
+    }
+
+    ul.menu li ul {
+      background: #34495e;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 150px;
+      display: none;
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    ul.menu li ul li a {
+      padding: 10px;
+    }
+
+    ul.menu li.active > ul {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      ul.menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+		
+      }
+
+      .navbar.active ul.menu {
+        display: flex;
+		
+      }
+
+      ul.menu li ul {
+        position: static;
+      }
+	  
+	  
+    }
+	
+	
+	.container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+      justify-content: center;
+	  
+	  
+    }
+
+    .panel {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      flex: 1 1 300px;
+	  
+    }
+	.bg{
+	 padding: 2px;
+	
+	
+	}
+	 
+
+    @media (max-width: 600px) {
+
+      .panel {
+        width: 100%;
+}
+	
+ }
