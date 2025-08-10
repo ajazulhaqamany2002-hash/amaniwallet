@@ -52,13 +52,37 @@
   
       <div class="panel bg" style="background:#66b8e6; color:white; text-align:center;">
     <img src="image/bg.png" alt="محتوای ویژه" style="width:100%; border-radius:8px;">
+		  
    <h4 style="text-align:center;">Download App</h4>
-	 <a href="Amani Wallet 0.0.5-v7a-release.apk" download>
-    <button style="position:center; background-color:#edf2fa; border-radius:8px; padding:5px;  cursor: pointer;">Amani Wallet 0.0.5-v7a-release.apk</button>
-  </a>
+
+		  
+	 <button class="btn login-btn" onclick="openModal('login')">DOWNLOAD   &emsp; <i class="fa fa-download"></i></button>
+  
     <p style="text-align:center;">for android system</p>
   </div>
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">×</span>
 
+      <!-- فرم ورود -->
+      <div id="loginForm" class="form-section active">
+        <h2>Download App</h2>
+       <p style="margin:15px;">For standard phones, choose the Classic version</p>
+	    <a href="Amani Wallet 0.0.7-v7a-release.apk" download>
+	<button class="btn login-btn submit" onclick="openModal('login')">amaniwaller v2.45   &emsp; <i class="fa fa-download"></i></button>
+     </a>
+ <p style="margin:15px;">for modern devices, go with the Enhanced edition.</p>    
+		    <a href="Amani Wallet 0.0.7-v8a-release.apk" download>
+	<button class="btn login-btn submit" onclick="openModal('login')">amaniwaller v2.45   &emsp; <i class="fa fa-download"></i></button>
+		  </a>
+       
+      </div>
+
+      <!-- فرم ثبت‌نام -->
+     
+
+    </div>
+  </div>
 	 
   </div>
 
